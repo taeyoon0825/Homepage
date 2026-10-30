@@ -4,7 +4,7 @@
 
 ## 실행
 
-Node.js 20.19 이상 또는 22.12 이상을 권장합니다.
+Node.js 24.x를 사용합니다. `.nvmrc`와 `package.json`에 로컬·Vercel 빌드 버전을 맞췄습니다.
 
 ```sh
 npm install
@@ -68,3 +68,7 @@ npm run preview
 ## 이번 검증 결과
 
 TypeScript 검사와 Vite 프로덕션 빌드가 통과했습니다. `npm run verify`로 React 서버 렌더링, 중복 ID 및 내부 앵커, 서비스·추천 탭·FAQ 구성, 필수 항목·연락처·이메일·확인 체크박스 검증과 데모 제출 결과를 확인했습니다. 브라우저 자동화 도구가 제공되지 않아 실제 화면의 반응형 레이아웃과 클릭·키보드 조작은 직접 검증하지 못했습니다. 운영 전 실제 브라우저 및 모바일 기기에서 확인이 필요합니다.
+
+## Vercel 배포 준비
+
+기존 GitHub 저장소를 이용한 배포 설정은 `vercel.json`에 추가했습니다. 사용자 선택에 따라 검토 기간에는 HTML과 HTTP 헤더에 `noindex, nofollow`를 설정합니다. Vercel Hobby의 비상업용 제한을 확인해야 하며, 이번 작업은 로그인·프로젝트 생성·실제 배포를 수행하지 않습니다. 설정값, GitHub `main` 자동 배포 연결, 인증, 환경변수, 정식 도메인 전환 및 배포 후 확인표는 [DEPLOYMENT.md](./DEPLOYMENT.md)를 참고하세요.
